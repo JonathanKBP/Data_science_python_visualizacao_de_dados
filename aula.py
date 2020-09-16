@@ -75,13 +75,42 @@ def grafico_dispersao ():
   plt.ylabel ("Média de minutos diária passados na rede")
   plt.show()
 
+def grafico_de_linha_amigos_por_usuarios():
+  usuarios = ['a', 'b', 'c', 'd', 'e', 'f', 'g' ,'h', 'i']
+  amigos = [15, 150, 23, 548, 54, 78, 98, 40, 68]
+  plt.plot (usuarios, amigos, marker='o', linestyle='solid')
+  plt.title ("amigos por usuário")
+  plt.ylabel ("Amigos")
+  plt.xlabel ("Usuarios")
+  plt.show()
 
+def grafico_dispersao_salário_e_tempo_de_experiência():
+  salarios = [1500, 8000, 950, 3540, 5500, 2500, 1900]
+  tempo_de_experiencia = [1, 5, 0, 3, 4, 3, 2]
+  rotulos = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+  plt.scatter(tempo_de_experiencia, salarios)
+  for rotulo, ano_exp, salario in zip (rotulos, tempo_de_experiencia, salarios):
+    plt.annotate(
+      rotulo,
+      xy = (ano_exp, salario),
+      xytext= (5, -5),
+      textcoords = 'offset points'
+    )
+  plt.title ("Salário e tempo de experiência")
+  plt.xlabel ("Anos de experiência")
+  plt.ylabel ("Salário em R$")
+  plt.show()
 
 def main():
-  grafico_linha()
-  grafico_barra()
-  grafico_histograma()
-  mencoes_data_science_com_valor_zero()
-  grafico_dispersao()
+  #grafico_linha()
+  #grafico_barra()
+  #grafico_histograma()
+  #mencoes_data_science_com_valor_zero()
+  #grafico_dispersao()
+  grafico_de_linha_amigos_por_usuarios()
+  grafico_dispersao_salário_e_tempo_de_experiência()
 
 main()
+
+#1 Construa um gráfico de linha que mostra o número de amigos por usuário.
+#2 Construa um gráfico de dispersão envolvendo salário e tempo de experiência.
