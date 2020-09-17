@@ -102,15 +102,12 @@ def grafico_dispersao_salário_e_tempo_de_experiência():
   plt.show()
 
 def main():
-  #grafico_linha()
-  #grafico_barra()
-  #grafico_histograma()
-  #mencoes_data_science_com_valor_zero()
-  #grafico_dispersao()
+  grafico_linha()
+  grafico_barra()
+  grafico_histograma()
+  mencoes_data_science_com_valor_zero()
+  grafico_dispersao()
   grafico_de_linha_amigos_por_usuarios()
   grafico_dispersao_salário_e_tempo_de_experiência()
 
 main()
-
-#1 Construa um gráfico de linha que mostra o número de amigos por usuário.
-#2 Construa um gráfico de dispersão envolvendo salário e tempo de experiência.
